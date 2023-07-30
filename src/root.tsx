@@ -1,23 +1,15 @@
 // @refresh reload
 import { Suspense } from "solid-js";
-import {
-  A,
-  Body,
-  ErrorBoundary,
-  Head,
-  Html,
-  Meta,
-  Scripts,
-  Title,
-} from "solid-start";
+import { Body, ErrorBoundary, Head, Html, Meta, Scripts } from "solid-start";
 import "./root.css";
-import SpacesRouter from "./spaces_router";
+import SpacesRouter from "./s_router";
+import SpacesTitle from "./s_title";
 
-export default function Root() {
+export default function SpacesClient() {
   return (
     <Html lang="en">
       <Head>
-        <Title>Spaces</Title>
+        <SpacesTitle>Spaces</SpacesTitle>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -31,4 +23,4 @@ export default function Root() {
       </Body>
     </Html>
   );
-}
+};
