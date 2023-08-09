@@ -4,8 +4,8 @@ function SectionHeading() {
   const location = useLocation();
 
   return (
-    <section class="flex items-end h-24 border-b">
-      <h1 class="ml-2 mb-2 font-mono font-bold text-2xl text-white">
+    <section class="flex h-24 items-end border-b">
+      <h1 class="font-mono mb-2 ml-2 text-2xl font-bold text-white">
         {location.pathname}
       </h1>
     </section>

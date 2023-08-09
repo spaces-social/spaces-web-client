@@ -1,21 +1,23 @@
 import { FileRoutes, Routes, Route } from "solid-start";
 
-import MainView from "~/routes/index";
+import MainView from "~/sections/main";
 import HomeView from "./sections/main/home";
 import BrowseView from "./sections/main/browse";
 import SubmissionsView from "./sections/main/submissions";
 import CollectionsView from "./sections/main/collections";
 
-import UserView from "./routes/user";
-import UserPosts from "./routes/user/posts";
-import UserContent from "./routes/user/content";
-import UserCollections from "./routes/user/collections";
-import UserCommissions from "./routes/user/commissions";
+import UserView from "./sections/user";
+import UserPosts from "./sections/user/posts";
+import UserContent from "./sections/user/content";
+import UserCollections from "./sections/user/collections";
+import UserCommissions from "./sections/user/commissions";
+import Landing from "./sections/landing";
 
 function SpacesRouter() {
   return (
     <Routes>
       <Route path="/" component={MainView}>
+        <Route path="/" component={MainView} />
         <Route path="/home" component={HomeView} />
         <Route path="/browse" component={BrowseView} />
         <Route path="/submissions" component={SubmissionsView} />
@@ -27,6 +29,7 @@ function SpacesRouter() {
           <Route path="/commissions" component={UserCommissions} />
         </Route>
       </Route>
+      <Route path="/landing" component={Landing} />
       <FileRoutes />
     </Routes>
   );

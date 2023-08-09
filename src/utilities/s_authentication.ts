@@ -1,13 +1,10 @@
 function monitorAuth() {
-    if(isAuth() == false) {
-        
-    }
+  if (isAuth() == false) {
+  }
 }
 
 function isAuth(): boolean {
-    return true
+  return true;
 }
 
-function tryAuth() {
-    
-}
+function tryAuth() {}
